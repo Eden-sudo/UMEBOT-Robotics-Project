@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor raíz para la fila completa. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <!-- La "burbuja" del mensaje. Se alinea a la izquierda (start) del contenedor padre. -->
+    <LinearLayout
+        android:id="@+id/message_bubble_robot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@drawable/bg_robot_message"
+        android:elevation="2dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- TextView para mostrar el nombre del remitente (ej. "Umebot"). -->
+        <TextView
+            android:id="@+id/sender_text_view_robot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            tools:text="Umebot"/>
+
+        <!-- El TextView que contiene el texto del mensaje del robot. -->
+        <TextView
+            android:id="@+id/message_text_view_robot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorPrimary"
+            tools:text="Este es un mensaje del robot."/>
+    </LinearLayout>
+
+</LinearLayout>
+

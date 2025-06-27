@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define una forma rectangular para la burbuja de chat del usuario. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Color de relleno sólido para la burbuja del usuario. -->
+    <solid android:color="#C8E6C9"/> <!-- Un verde claro -->
+
+    <!--
+    Define las esquinas redondeadas. La esquina superior derecha es menos redondeada
+    para crear el efecto de "cola" en el lado opuesto al del robot.
+    -->
+    <corners android:radius="16dp"
+        android:topLeftRadius="16dp"
+        android:topRightRadius="4dp"
+        android:bottomLeftRadius="16dp"
+        android:bottomRightRadius="16dp"/>
+</shape>
+

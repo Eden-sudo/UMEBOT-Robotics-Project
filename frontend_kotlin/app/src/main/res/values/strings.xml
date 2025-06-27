@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UmebotRos2</string>
+    <string name="drawer_open">Abrir</string>
+    <string name="drawer_close">Cerrar</string>
+</resources>

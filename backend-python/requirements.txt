@@ -1,0 +1,58 @@
+# #############################################################
+# # Requirements para el Proyecto Umebot
+# # Nota: Hay ciertas librerias que peuden tener problemas o hay que aclararlas o simplemte las voy a remarcar
+# #############################################################
+
+# --- Dependencias del Núcleo de la Aplicación ---
+# Librerías esenciales para el funcionamiento principal del backend.
+
+qi
+fastapi
+uvicorn
+websockets
+numpy
+vosk
+sounddevice
+openai
+llama-cpp-python
+paramiko
+zeroconf
+httpx
+keyring
+
+# --- Dependencias de Percepción (Visión por Computadora) ---
+# Necesarias para el nodo de ROS2 que procesa imágenes con YOLO.
+
+ultralytics
+opencv-python
+
+# --- Dependencias Opcionales y Experimentales ---
+# Librerías para funcionalidades que no son parte del flujo principal
+# o que se usaron en scripts de prueba y desarrollo.
+
+# Para remuestreo de audio de alta calidad y VAD
+librosa
+webrtcvad-wheels
+
+# Para la GUI experimental de escritorio
+kivy
+
+# Para el script de ajuste fino (fine-tuning) de modelos de IA
+torch
+transformers
+datasets
+peft
+trl
+
+# #############################################################
+# # NOTAS IMPORTANTES SOBRE DEPENDENCIAS NO INCLUIDAS
+# #############################################################
+#
+# La librería 'q' hay varias verciones pero la importante
+# esta para python3: https://pypi.org/project/qi/ 
+#
+# El stack de ROS2 ('rclpy', 'cv_bridge', etc.) debe ser instalado,
+# compilado y "sourceado" por separado. No se instala con pip.
+# Para este proyecto se usó la distribución ROS2 Rolling.
+#
+# #############################################################

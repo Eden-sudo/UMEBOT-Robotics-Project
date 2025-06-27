@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor raíz que permite un panel de navegación lateral (el "drawer"). -->
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start"> <!-- Atributo de diseño para previsualizar el panel abierto en el editor. -->
+
+    <!--
+    Contenido principal de la pantalla (la interfaz de chat).
+    Este es el contenido que es visible cuando el panel de navegación está cerrado.
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Contenedor para la barra de la aplicación superior (Toolbar). -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- La barra de herramientas que muestra el título y el ícono del menú. -->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Chat Umebot" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--
+        La lista donde se mostrarán los mensajes del chat.
+        Ocupa todo el espacio disponible entre la barra superior y el área de entrada.
+        -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_chat_logo"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/inputArea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            tools:listitem="@layout/item_message_user" />
+
+        <!--
+        El área de entrada en la parte inferior de la pantalla, que contiene
+        el campo de texto y el botón de enviar.
+        -->
+        <LinearLayout
+            android:id="@+id/inputArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical"
+            android:background="?attr/colorSurfaceContainerHighest"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Campo de texto para que el usuario escriba sus mensajes. -->
+            <EditText
+                android:id="@+id/messageEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Escribe un mensaje..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="4"
+                android:minHeight="48dp"
+                android:background="?attr/editTextBackground"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"/>
+
+            <!-- Botón para enviar el mensaje. -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sendButton"
+                style="@style/Widget.Material3.Button.IconButton.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:icon="@android:drawable/ic_menu_send"
+                android:contentDescription="Enviar mensaje"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    El contenido del panel de navegación lateral.
+    android:layout_gravity="start" indica que se deslizará desde la izquierda.
+    -->
+    <ScrollView
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?android:attr/colorBackground"
+        android:fillViewport="true">
+
+        <!-- Contenedor para todos los elementos de configuración dentro del panel. -->
+        <LinearLayout
+            android:id="@+id/drawer_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingBottom="16dp">
+
+            <!-- SECCIÓN: CONFIGURACIÓN GENERAL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Configuración General"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_audio_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Audio: Desconocido"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_chat_history_visibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Mostrar Historial"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+
+            <!-- SECCIÓN: INTELIGENCIA ARTIFICIAL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inteligencia Artificial"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personalidad:"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"/>
+            <Spinner
+                android:id="@+id/spinner_ai_personality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="Seleccionar personalidad de IA"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modelo IA:"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"/>
+            <Spinner
+                android:id="@+id/spinner_ai_model_backend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Seleccionar modelo de IA"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+
+            <!-- SECCIÓN: CONTROL POR GAMEPAD -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Control por Gamepad"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_enable_gamepad_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Activar Control Gamepad"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+            <TextView
+                android:id="@+id/textview_gamepad_connection_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Gamepad: Desactivado"
+                android:textAppearance="?attr/textAppearanceBodyMedium"/>
+            <Button
+                android:id="@+id/button_refresh_gamepad_devices"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Buscar/Refrescar"
+                android:visibility="gone"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_gamepad_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:maxHeight="250dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
+

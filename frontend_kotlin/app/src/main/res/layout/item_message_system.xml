@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor que centra su contenido horizontalmente. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="6dp"
+    android:paddingHorizontal="16dp"
+    android:gravity="center">
+
+    <!--
+    El TextView que muestra el mensaje del sistema.
+    Tiene un fondo y estilo de texto (itálica, color secundario) distintivos
+    para diferenciarlo de los mensajes de la conversación.
+    -->
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_system_message"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="8dp"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textColor="?android:attr/textColorSecondary"
+        android:text="Conectando..." />
+</LinearLayout>

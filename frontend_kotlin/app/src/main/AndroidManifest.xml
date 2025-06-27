@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- PERMISOS DE RED -->
+    <!-- Esencial: Permite que la app abra sockets de red para conectarse al backend de Python por WebSocket. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permite a la aplicación acceder a información sobre las redes (ej. si está conectada a Wi-Fi). Útil para el descubrimiento de servicios. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- PERMISOS DE BLUETOOTH -->
+    <!--
+    Permisos para Android 11 (API 30) y anteriores.
+    BLUETOOTH es para la comunicación general.
+    BLUETOOTH_ADMIN es para descubrir otros dispositivos.
+    maxSdkVersion="30" indica que estos permisos solo se solicitan en versiones antiguas.
+    -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+
+    <!--
+    Permisos de Localización (Requeridos para el escaneo de Bluetooth en Android 6-11).
+    Aunque no se acceda a la ubicación GPS, el sistema lo requiere para poder encontrar dispositivos cercanos.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--
+    Permisos de Bluetooth para Android 12 (API 31) y superiores.
+    Son más granulares y mejoran la privacidad del usuario.
+    -->
+    <!-- Permiso necesario para conectarse a dispositivos Bluetooth ya emparejados. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <!-- Permiso necesario para buscar dispositivos Bluetooth cercanos. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        <!--
+        Importante: Le indica al sistema que la app busca dispositivos para conectarse a ellos,
+        y no para derivar la ubicación del usuario, evitando así una revisión de privacidad más estricta.
+        -->
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UmebotRos2"
+        tools:targetApi="31">
+        
+        <!--
+        Declaración de la actividad principal de la aplicación.
+        - android:name=".MainActivity": Especifica la clase Kotlin que implementa esta actividad.
+        - android:exported="true": Permite que la actividad sea lanzada por otros componentes del sistema (como el launcher).
+        - intent-filter: La configura como el punto de entrada principal (ACTION_MAIN) y la hace visible
+          en el lanzador de aplicaciones del dispositivo (CATEGORY_LAUNCHER).
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
+

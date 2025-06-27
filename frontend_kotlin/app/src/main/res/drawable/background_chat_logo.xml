@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layer-list permite superponer múltiples drawables. Es ideal para crear fondos complejos
+o efectos visuales sin necesidad de múltiples ImageViews.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Capa 1 (Fondo): Un fondo transparente. El color real del fondo de la app se verá a través de él. -->
+    <item android:drawable="@android:color/transparent" />
+
+    <!--
+    Capa 2 (Logo): Coloca el logo de UMECIT en el centro.
+    - android:gravity="center": Centra el logo en el espacio disponible.
+    - android:width/height: Define el tamaño del logo.
+    - android:alpha="0.25": Hace que el logo sea semitransparente (25% opaco) para que actúe como una marca de agua.
+    - android:bottom="80dp": Empuja el logo 80dp hacia arriba desde el borde inferior para un mejor posicionamiento visual.
+    -->
+    <item
+        android:drawable="@drawable/umecit_logo"
+        android:gravity="center"
+        android:width="350dp"
+        android:height="350dp"
+        android:alpha="0.25"
+        android:bottom="80dp" />
+</layer-list>
+

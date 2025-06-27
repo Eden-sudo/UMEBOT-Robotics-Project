@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor raíz para la fila completa. El padding vertical separa los mensajes entre sí. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <!-- La "burbuja" del mensaje. Se alinea a la derecha (end) del contenedor padre. -->
+    <LinearLayout
+        android:id="@+id/message_bubble_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:background="@drawable/bg_user_message"
+        android:elevation="2dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- El TextView que contiene el texto del mensaje del usuario. -->
+        <TextView
+            android:id="@+id/message_text_view_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorPrimary"
+            tools:text="Este es un mensaje del usuario."/>
+    </LinearLayout>
+
+</LinearLayout>
