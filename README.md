@@ -1,10 +1,10 @@
-# Sistema Robotico UMEBOT (Documentacion en Espanol)
+# Sistema Robotico UMEBOT (Documentacion en Espaňol)
 
 ![UMEBOT en accion](docs/images/foto_principal_del_robot.jpg)
 
 ## Vision del Proyecto
 
-Umebot es mas que un robot; es el simbolo tecnologico de la universidad UMECIT y una pieza de ingenieria con un potencial enorme. Nace con una vision: convertir a la universidad en una precursora de la ensenanza con robots autonomos, con la meta final de que UMEBOT pueda llegar a ser un profesor robotico.
+Umebot es mas que un robot; es el simbolo tecnologico de la universidad UMECIT y una pieza de ingenieria con un potencial enorme. Nace con una vision: convertir a la universidad en una precursora de la enseňanza con robots autonomos, con la meta final de que UMEBOT pueda llegar a ser un profesor robotico.
 
 ---
 
@@ -54,7 +54,7 @@ Para una inmersion profunda en la historia, los desafios y el analisis de cada m
 
 ## Sobre el Autor
 
-Ha sido un honor y un placer increible culminar este proyecto a mis 18 anos. Gracias por tomarte el tiempo de explorar mi trabajo. Si tienes alguna pregunta o te gustaria conectar, no dudes en contactarme.
+Ha sido un honor y un placer increible culminar este proyecto a mis 18 aňos. Gracias por tomarte el tiempo de explorar mi trabajo. Si tienes alguna pregunta o te gustaria conectar, no dudes en contactarme.
 
 **Carlos Duarte**
 * **LinkedIn:** [https://www.linkedin.com/in/carlos-duarte-6b8464346/](https://www.linkedin.com/in/carlos-duarte-6b8464346/)
