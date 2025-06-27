@@ -7,7 +7,16 @@
 Umebot es mas que un robot; es el simbolo tecnologico de la universidad UMECIT y una pieza de ingenieria con un potencial enorme. Nace con una vision: convertir a la universidad en una precursora de la enseňanza con robots autonomos, con la meta final de que UMEBOT pueda llegar a ser un profesor robotico.
 
 ---
+## Propósito de este Repositorio
 
+Este repositorio sirve como la documentación central y la visualización del prototipo experimental de UMEBOT. Su propósito principal es doble:
+
+* **Base para el Futuro:** Servir como una base de código y arquitectura sólida sobre la cual se puedan construir futuras implementaciones y mejoras del robot.
+* **Referencia Técnica:** Actuar como un caso de estudio y una referencia técnica detallada para otros estudiantes, desarrolladores o investigadores interesados en la robótica de servicios, la IA conversacional y la integración de sistemas complejos.
+
+Para una comprensión completa y detallada del proyecto, se recomienda encarecidamente consultar la documentación exhaustiva alojada en Google Drive.
+
+---
 ## Demostracion en Video
 
 Haz clic en las imagenes para ver el sistema funcionando.
