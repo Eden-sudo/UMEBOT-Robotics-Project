@@ -57,11 +57,16 @@ Para instrucciones detalladas de instalacion y ejecucion, por favor consulta las
 
 ---
 
-## Documentacion Completa
+## Documentacion Completa / Información sobre el Idioma
+
+Los comentarios y la documentación interna del código fuente de este proyecto están principalmente en español, en cumplimiento de directrices específicas del proyecto.
+
+Sin embargo, para una audiencia global y mayor accesibilidad, el **`README.md` principal (enlace a la versión en inglés)** y la **documentación completa del proyecto en Google Drive** están también disponibles en inglés.
 
 Para una inmersion profunda en la historia, los desafios y el analisis de cada modulo, puedes consultar la documentacion completa del proyecto.
 
-**[Leer la Documentacion Completa en Google Docs](https://docs.google.com/document/d/1S1QWxnhAV4Ik9rURn3ecavuSRjm7s95CjpAvrnoCoAQ/edit?usp=sharing)**
+**[Leer la Documentacion Completa en Google Docs (Espaňol)](https://docs.google.com/document/d/1S1QWxnhAV4Ik9rURn3ecavuSRjm7s95CjpAvrnoCoAQ/edit?usp=sharing)**
+**[Leer la Documentacion Completa en Google Docs (Ingles)](https://docs.google.com/document/d/1oHskIag0vZTLDV_PCVcVeNfQTbTxgq_pifbdl7yDybw/edit?usp=sharing)**
 
 ---
 
