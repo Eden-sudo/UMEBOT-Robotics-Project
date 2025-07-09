@@ -65,7 +65,7 @@ However, for a global audience and broader accessibility, the **main `README.md`
 
 For an in-depth dive into the history, challenges, and analysis of each module, you can consult the complete project documentation.
 
-**[Read the Full Documentation on Google Docs (English)](https://docs.google.com/document/d/1oHskIag0vZTLDV_PCVcVeNfQTbTxgq_pifbdl7yDybw/edit?usp=sharing)**
+**[Read the Full Documentation on Google Docs (English)](https://docs.google.com/document/d/1oHskIag0vZTLDV_PCVcVeNfQTbTxgq_pifbdl7yDybw/edit?usp=sharing)** |
 **[Read the Full Documentation on Google Docs (Spanish)](https://docs.google.com/document/d/1S1QWxnhAV4Ik9rURn3ecavuSRjm7s95CjpAvrnoCoAQ/edit?usp=sharing)**
 
 
