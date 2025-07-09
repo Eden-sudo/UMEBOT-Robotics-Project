@@ -35,7 +35,7 @@ Click on the images to see the system in action.
 
 The project utilizes a Client-Server architecture to maximize performance and flexibility.
 
-![Architecture Diagram](docs/images/UMEbotdrawio.png)
+![Architecture Diagram](docs/images/UMEbot_Inglish.drawio.png)
 
 ---
 
