@@ -65,7 +65,7 @@ Sin embargo, para una audiencia global y mayor accesibilidad, el **`README.md` p
 
 Para una inmersion profunda en la historia, los desafios y el analisis de cada modulo, puedes consultar la documentacion completa del proyecto.
 
-**[Leer la Documentacion Completa en Google Docs (Espaňol)](https://docs.google.com/document/d/1S1QWxnhAV4Ik9rURn3ecavuSRjm7s95CjpAvrnoCoAQ/edit?usp=sharing)**
+**[Leer la Documentacion Completa en Google Docs (Espaňol)](https://docs.google.com/document/d/1S1QWxnhAV4Ik9rURn3ecavuSRjm7s95CjpAvrnoCoAQ/edit?usp=sharing)** |
 **[Leer la Documentacion Completa en Google Docs (Ingles)](https://docs.google.com/document/d/1oHskIag0vZTLDV_PCVcVeNfQTbTxgq_pifbdl7yDybw/edit?usp=sharing)**
 
 ---
