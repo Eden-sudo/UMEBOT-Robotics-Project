@@ -57,11 +57,15 @@ For detailed installation and execution instructions, please refer to the guides
 
 ---
 
-## Full Documentation
+## Full Documentation / Language Information
+
+This project's **source code comments and internal documentation are primarily in Spanish**, in adherence to specific project guidelines.
+
+However, for a global audience and broader accessibility, the **main `README.md` (this file)** and the **comprehensive project documentation on Google Drive** are fully available in English.
 
 For an in-depth dive into the history, challenges, and analysis of each module, you can consult the complete project documentation.
 
-**[Read the Full Documentation on Google Docs](https://docs.google.com/document/d/1S1QWxnhAV4Ik9rURn3ecavuSRjm7s95CjpAvrnoCoAQ/edit?usp=sharing)**
+**[Read the Full Documentation on Google Docs](https://docs.google.com/document/d/1oHskIag0vZTLDV_PCVcVeNfQTbTxgq_pifbdl7yDybw/edit?usp=sharing)**
 
 ---
 
