@@ -35,7 +35,7 @@ Haz clic en las imagenes para ver el sistema funcionando.
 
 El proyecto utiliza una arquitectura Cliente-Servidor para maximizar el rendimiento y la flexibilidad.
 
-![Diagrama de Arquitectura](docs/images/UMEbotdrawio.png)
+![Diagrama de Arquitectura](docs/images/UMEbot_espaňol.drawio.png)
 
 ---
 
