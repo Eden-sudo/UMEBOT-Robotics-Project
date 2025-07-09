@@ -1,5 +1,9 @@
 # Sistema Robotico UMEBOT (Documentacion en Espaňol)
 
+[English](README.md) | [Español](README.es.md)
+
+---
+
 ![UMEBOT en accion](docs/images/foto_principal_del_robot.jpg)
 
 ## Vision del Proyecto
